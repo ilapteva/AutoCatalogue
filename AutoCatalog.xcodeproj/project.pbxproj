@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2A3FB1142350B1B000159FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB1132350B1B000159FDA /* AppDelegate.swift */; };
 		2A3FB1162350B1B000159FDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB1152350B1B000159FDA /* SceneDelegate.swift */; };
-		2A3FB1182350B1B000159FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB1172350B1B000159FDA /* ViewController.swift */; };
+		2A3FB1182350B1B000159FDA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB1172350B1B000159FDA /* CategoryViewController.swift */; };
 		2A3FB11B2350B1B000159FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3FB1192350B1B000159FDA /* Main.storyboard */; };
 		2A3FB11D2350B1B300159FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3FB11C2350B1B300159FDA /* Assets.xcassets */; };
 		2A3FB1202350B1B300159FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3FB11E2350B1B300159FDA /* LaunchScreen.storyboard */; };
+		2A3FB12B2350B47D00159FDA /* CarParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB12A2350B47D00159FDA /* CarParams.swift */; };
+		2A3FB12D2351048200159FDA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB12C2351048200159FDA /* Category.swift */; };
+		2A3FB12F2351054400159FDA /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB12E2351054400159FDA /* CarsViewController.swift */; };
+		2A3FB1312354EF5600159FDA /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FB1302354EF5500159FDA /* SwipeTableViewController.swift */; };
+		F13B97CA953C69DD507B284F /* Pods_AutoCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D601196D7E1A682C324846 /* Pods_AutoCatalog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A3FB1102350B1AF00159FDA /* AutoCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3FB1132350B1B000159FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A3FB1152350B1B000159FDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A3FB1172350B1B000159FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A3FB1172350B1B000159FDA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		2A3FB11A2350B1B000159FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A3FB11C2350B1B300159FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3FB11F2350B1B300159FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A3FB1212350B1B300159FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A3FB12A2350B47D00159FDA /* CarParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarParams.swift; sourceTree = "<group>"; };
+		2A3FB12C2351048200159FDA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2A3FB12E2351054400159FDA /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
+		2A3FB1302354EF5500159FDA /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		A45CB2EA71339D29F1415B29 /* Pods-AutoCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCatalog.debug.xcconfig"; path = "Target Support Files/Pods-AutoCatalog/Pods-AutoCatalog.debug.xcconfig"; sourceTree = "<group>"; };
+		AB345F6F6EB43DEFDA1B48C9 /* Pods-AutoCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCatalog.release.xcconfig"; path = "Target Support Files/Pods-AutoCatalog/Pods-AutoCatalog.release.xcconfig"; sourceTree = "<group>"; };
+		F7D601196D7E1A682C324846 /* Pods_AutoCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13B97CA953C69DD507B284F /* Pods_AutoCatalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				2A3FB1122350B1AF00159FDA /* AutoCatalog */,
 				2A3FB1112350B1AF00159FDA /* Products */,
+				9E6502BC95F0871C7863CFE5 /* Pods */,
+				8B10ED4603695BCBFDD4FA6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,60 @@
 		2A3FB1122350B1AF00159FDA /* AutoCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				2A3FB1272350B3A600159FDA /* Model */,
+				2A3FB1282350B3B200159FDA /* View */,
+				2A3FB1292350B3B700159FDA /* Controllers */,
 				2A3FB1132350B1B000159FDA /* AppDelegate.swift */,
 				2A3FB1152350B1B000159FDA /* SceneDelegate.swift */,
-				2A3FB1172350B1B000159FDA /* ViewController.swift */,
-				2A3FB1192350B1B000159FDA /* Main.storyboard */,
 				2A3FB11C2350B1B300159FDA /* Assets.xcassets */,
 				2A3FB11E2350B1B300159FDA /* LaunchScreen.storyboard */,
 				2A3FB1212350B1B300159FDA /* Info.plist */,
 			);
 			path = AutoCatalog;
+			sourceTree = "<group>";
+		};
+		2A3FB1272350B3A600159FDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A3FB12A2350B47D00159FDA /* CarParams.swift */,
+				2A3FB12C2351048200159FDA /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A3FB1282350B3B200159FDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A3FB1192350B1B000159FDA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A3FB1292350B3B700159FDA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A3FB1172350B1B000159FDA /* CategoryViewController.swift */,
+				2A3FB12E2351054400159FDA /* CarsViewController.swift */,
+				2A3FB1302354EF5500159FDA /* SwipeTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B10ED4603695BCBFDD4FA6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7D601196D7E1A682C324846 /* Pods_AutoCatalog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E6502BC95F0871C7863CFE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A45CB2EA71339D29F1415B29 /* Pods-AutoCatalog.debug.xcconfig */,
+				AB345F6F6EB43DEFDA1B48C9 /* Pods-AutoCatalog.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3FB1242350B1B300159FDA /* Build configuration list for PBXNativeTarget "AutoCatalog" */;
 			buildPhases = (
+				75A7B48F25A6817B7122319E /* [CP] Check Pods Manifest.lock */,
 				2A3FB10C2350B1AF00159FDA /* Sources */,
 				2A3FB10D2350B1AF00159FDA /* Frameworks */,
 				2A3FB10E2350B1AF00159FDA /* Resources */,
+				099DB3F6A5BD6A0124BD653C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +195,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		099DB3F6A5BD6A0124BD653C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoCatalog/Pods-AutoCatalog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoCatalog/Pods-AutoCatalog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoCatalog/Pods-AutoCatalog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75A7B48F25A6817B7122319E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoCatalog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A3FB10C2350B1AF00159FDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A3FB1182350B1B000159FDA /* ViewController.swift in Sources */,
+				2A3FB1182350B1B000159FDA /* CategoryViewController.swift in Sources */,
+				2A3FB12D2351048200159FDA /* Category.swift in Sources */,
 				2A3FB1142350B1B000159FDA /* AppDelegate.swift in Sources */,
+				2A3FB1312354EF5600159FDA /* SwipeTableViewController.swift in Sources */,
+				2A3FB12B2350B47D00159FDA /* CarParams.swift in Sources */,
 				2A3FB1162350B1B000159FDA /* SceneDelegate.swift in Sources */,
+				2A3FB12F2351054400159FDA /* CarsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +390,7 @@
 		};
 		2A3FB1252350B1B300159FDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45CB2EA71339D29F1415B29 /* Pods-AutoCatalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +408,7 @@
 		};
 		2A3FB1262350B1B300159FDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB345F6F6EB43DEFDA1B48C9 /* Pods-AutoCatalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
