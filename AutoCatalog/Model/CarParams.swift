@@ -6,13 +6,31 @@
 //  Copyright © 2019 Irina Lapteva. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class CarParams: Object {
-    @objc dynamic var year: String = ""
-    @objc dynamic var mark: String = ""
+    
+    @objc dynamic var id = 0
+    @objc dynamic var brand: String = ""
+    @objc dynamic var releaseYear: String = ""
     @objc dynamic var model: String = ""
-    @objc dynamic var type: String = ""
-    var parentCategory = LinkingObjects(fromType: Category.self, property: "items")
+    @objc dynamic var carBody: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    convenience init(id: Int, brand: String, releaseYear: String, model: String, carBody: String) {
+        self.init()
+        self.id = id
+        self.brand = brand
+        self.releaseYear = releaseYear
+        self.model = model
+        self.carBody = carBody
+        
+    }
+    
 }
+
+
+
