@@ -8,14 +8,11 @@
 
 import Foundation
 import UIKit
-import RealmSwift
 
 class CarTableViewController: UITableViewController {
         var allCars: [CarParams]?
         var selectedCar: CarParams?
-        let carVC = CarTableViewController()
-        let reuseIdentifier = "autoCell"
-//        var addButton = UIBarButtonItem()
+        let reuseIdentifier = "carCell"
   
     
         override func viewDidLoad() {
@@ -23,8 +20,6 @@ class CarTableViewController: UITableViewController {
             
             settingsForFirstLaunch()
             allCars = Array(realm.objects(CarParams.self))
-//            addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-//            navigationItem.rightBarButtonItem = addButton
             
         }
         
@@ -37,7 +32,7 @@ class CarTableViewController: UITableViewController {
                 let cars = [firstCar, secondCar, thirdCar]
             
                 for car in cars {
-                    ServiceRealm.save(autoObject: car)
+                    ServiceRealm.save(carObject: car)
                 }
             }
         }
@@ -57,49 +52,50 @@ class CarTableViewController: UITableViewController {
         performSegue(withIdentifier: "goToParams", sender: self)
     }
         
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "goToParams" {
-                if let carVC = segue.destination as? CarParamsTableViewController {
-                    guard let selectedCar = selectedCar else { return }
-                    carVC.car = selectedCar
-                }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToParams" {
+            if let carVC = segue.destination as? CarParamsTableViewController
+            {
+                guard let selectedCar = selectedCar else { return }
+                carVC.car = selectedCar
             }
         }
     }
+}
 
-    extension CarTableViewController {
-        
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return allCars?.count ?? 0
-        }
-        
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CarTableViewCell
-            guard let car = allCars?[indexPath.row] else { return  UITableViewCell() }
-            cell.brandLabel.text = car.brand
-            cell.modelLabel.text = car.model
-            cell.yearLabel.text = car.releaseYear
-            cell.carBodyLabel.text = car.carBody
-
-            return cell
-        }
-        
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            selectedCar = allCars?[indexPath.row]
-            performSegue(withIdentifier: "goToParams", sender: self)
-        }
-
-        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 80
-        }
-        
-        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                ServiceRealm.delete(autoObject: allCars![indexPath.row])
-                allCars?.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-        }
-        
+extension CarTableViewController {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allCars?.count ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! CarTableViewCell
+        guard let car = allCars?[indexPath.row] else { return  UITableViewCell() }
+        cell.brandLabel.text = car.brand
+        cell.modelLabel.text = car.model
+        cell.yearLabel.text = car.releaseYear
+        cell.carBodyLabel.text = car.carBody
+
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCar = allCars?[indexPath.row]
+        performSegue(withIdentifier: "goToParams", sender: self)
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ServiceRealm.delete(carObject: allCars![indexPath.row])
+            allCars?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+}
 

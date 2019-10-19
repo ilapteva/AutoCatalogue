@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+//class Model: Object {
+//    dynamic var id: String?
+//}
+
 class Category: Object {
     @objc dynamic var name: String = ""
     let items = List<CarParams>()

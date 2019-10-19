@@ -13,15 +13,15 @@ let realm = try! Realm()
 
 class ServiceRealm {
     
-    static func save(autoObject: CarParams) {
+    static func save(carObject: CarParams) {
         try! realm.write {
-            realm.add(autoObject)
+            realm.add(carObject)
         }
     }
     
-    static func delete(autoObject: CarParams) {
+    static func delete(carObject: CarParams) {
         try! realm.write {
-            realm.delete(autoObject)
+            realm.delete(carObject)
         }
     }
     
